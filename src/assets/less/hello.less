@@ -1,10 +1,89 @@
 .home{
+    color:#fff;
     .title{
         height: 1.36rem;
         background: #e54847;
         font-size:18px;
-        color:#fff;
         line-height: 1.36rem;
+    }
+    .city{
+        font-size:14px;
+        position: absolute;
+        left:0.2rem;;
+        height: 1.36rem;
+        line-height: 1.36rem;
+        &:after{
+            content: '';
+            width: 0;
+            height: 0;
+            border:0.14rem solid transparent;
+            border-top:0.14rem solid #fff;
+            margin-left:0.1rem;
+            vertical-align: -18px;;
+        }
+    }
+}
+.content{
+    .tab-menu{
+        display: flex;
+        padding:0 0.3rem;
+        li{
+            flex-grow: 1;
+            padding:0.3rem 0;
+            text-align: center;
+        }
+    }
+    .active{
+        border-bottom:0.1rem solid #e54847;
+    }
+    .line{
+        border-bottom:0.1rem solid #DDD8CE;
+        margin-top:-0.1rem;
+    }
+    .movie-list{
+        padding:0 0.35rem;
+        li.list-item{
+            padding:0.23rem 0;
+            display: flex;
+            align-items: center;
+            border-bottom: 1px solid #E6E6E6;
+            .movie-img{
+                width:1.62rem;
+                height: 2.293rem;
+                img{
+                    width:100%;
+                }
+            }
+            .introduce{
+                margin-left:0.3rem;
+                flex-grow: 2;
+                p{
+                    padding:0.03rem 0;
+                    text-align: left;
+                }
+                .move-tit{
+                    color:#222;
+                }
+                .beizhu{
+                    color:#999;
+                }
+            }
+            .right{
+                position: relative;
+                .goal{
+                    margin-bottom: 0.8rem;
+                    color:#FFB400;
+                }
+                span{
+                    padding:0.15rem 0.3rem;
+                    color:#fff;
+                    background:#EF4238;
+                    border-radius: 3px;
+                }
+            }
+        }
+        .movie-img,.introduce,.right{
+        }
     }
 }
 [data-dpr="2"] .title{
@@ -12,4 +91,11 @@
 }
 [data-dpr="3"] .title{
     font-size: 54px;
+}
+
+[data-dpr="2"] .city{
+    font-size:28px;
+}
+[data-dpr="3"] .city{
+    font-size:42px;
 }
